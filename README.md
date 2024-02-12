@@ -91,7 +91,20 @@ vim -R file - только просмотр, без сохранения
 - /word - поиск word в документе - n следующее совпадение, shift + n - предыдущее
 - %s/moon/Moon/g - замена всех moon на Moon по всему файлу
 
+**Консольные команды**
 
+- find / -name "my.txt"
+- find / -mtime +7 (modify time)
+- find / -atime +3 (access time)
+- find / -type d
+- find / -type f
+- find /home/me/test/ -name "*.jpg" -exec mv {} /home/me/pic/ \;
 
+Директория это файл в котором содержится сопостовление имени файлы и его метаданные.
+
+- ps auxf | grep soft | grep -v grep | tr -s " " | cut -f2 -d " " | xargs kill -9
+- tr - режет все пробелы до одного
+- cut - берет 2 позицию с разделителем " " (пробел)
+- xargs - возмет вывод и передаст как аргумет
 
 
