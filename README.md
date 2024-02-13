@@ -124,3 +124,64 @@ then
 fi
 echo "its 2 good"
 ```
+```
+if [  ]
+then ...
+elif [  ]
+then ...
+else ...
+fi
+```
+- read  -p "Please enter something: " line
+- read -s -p "Password: " - скрывает введенные символы
+
+**DNS**
+- host yandex.ru
+- traceroute yandex.ru
+- dig +trace yandex.ru
+
+**shell**
+- alias
+- alias lsa="ls -la"
+- alias pss="ps aufx"
+
+- jobs - вывод запущенных фоновых процессов
+- Ctrl + Z - остановить запущенный процесс (если запустили и он забрал консоль)
+- bg 2 - запустить процесс в фоне
+
+- let a=3+5; echo $a
+- expr 3 + 5
+- echo $((5+5))
+```
+case "$переменная" in
+"вариант1" ) команда ;;
+"вариант2" ) команда;;
+*) команда
+esac
+```
+**Heredoc**
+```
+command << end
+line1
+line2
+line3
+end
+```
+```
+for i in ya.ru google.com vk.com
+do
+        ping -c4 -q $i &> /dev/null && echo "$i is available!" || echo "$i is unreachable"
+done
+```
+```
+for i in ya.ru google.com; do ping -c3 -q $i; done
+for i in $(ls /tmp/); do echo $i; done
+for ((i=1;i<=10;i++; do echo "Hi!"; done))
+for i in $(seq 1 10); do echo "Hi!"; done
+```
+
+
+
+
+
+
