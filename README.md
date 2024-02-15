@@ -485,10 +485,25 @@ create user 'wordpressuser'@'localhost' indentified with mysql_native_password b
 grant all on wordpress.* to 'wordpressuser'@'localhost';
 flush privileges;
 exit
-``
-
-
-
+```
+**Установка из исходников**
+- читаем README
+- ./configure
+- make
+- make install
+```
+ar t file.deb - посмотреть содержимое deb пакетов
+ar p file.deb file2.xz | tar -tv -J - посмотреть содерживое архива из deb пакета
+ar x file.deb - распокавать deb пакет
+```
+Примерное содержимое control.tar.xz
+- control - описание пакета, зависимотей, конфликтов, несовметимостей и др.
+- postinst - после установки
+- postrm - после удаления
+- preinst - перед установкой
+- prerm - перед удалением
+- md5sums - хеш-суммы для всех файлов пакета
+- confiles - перечисляет файлы, которые должны обрабатываться как файлы конфигурации - должен отмечать и сохранять изменения в них
 
 
 
